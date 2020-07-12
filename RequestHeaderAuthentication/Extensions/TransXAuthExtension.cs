@@ -3,8 +3,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
 using System;
+using RequestHeaderAuthentication;
 
-namespace ChiscoTransX.Auth.Events
+namespace RequestHeaderAuthentication
 {
     public static class TransXAuthExtension
     {

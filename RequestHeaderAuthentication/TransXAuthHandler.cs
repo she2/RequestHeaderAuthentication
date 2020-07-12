@@ -1,18 +1,19 @@
-﻿using ChiscoTransX.Auth.Events;
+﻿using System;
+using System.Linq;
+using System.Net;
+using System.Security.Claims;
+using System.Text.Encodings.Web;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.Net.Http.Headers;
-using System;
-using System.Linq;
-using System.Net;
-using System.Security.Claims;
-using System.Text.Encodings.Web;
-using System.Threading.Tasks;
+using RequestHeaderAuthentication.Events;
+using RequestHeaderAuthentication.Extensions;
 
-namespace ChiscoTransX.Auth
+namespace RequestHeaderAuthentication
 {
     public sealed class TransXAuthHandler : AuthenticationHandler<TransXAuthOptions>
     {

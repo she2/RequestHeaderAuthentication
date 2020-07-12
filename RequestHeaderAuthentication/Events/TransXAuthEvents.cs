@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace ChiscoTransX.Auth.Events
+namespace RequestHeaderAuthentication.Events
 {
     public class TransXAuthEvents
     {

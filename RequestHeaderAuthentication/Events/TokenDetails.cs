@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Authentication;
 
-namespace ChiscoTransX.Auth.Events
+namespace RequestHeaderAuthentication.Events
 {
     public class TokenDetails
     {

@@ -3,7 +3,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 
-namespace ChiscoTransX.Auth.Events
+namespace RequestHeaderAuthentication.Events
 {
     public class ValidateTransXTokenContext : ResultContext<TransXAuthOptions>
     {

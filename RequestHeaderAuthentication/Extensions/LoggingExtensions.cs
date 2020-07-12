@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Extensions.Logging;
 
-namespace ChiscoTransX.Auth.Events
+namespace RequestHeaderAuthentication.Extensions
 {
     internal static class LoggingExtensions
     {

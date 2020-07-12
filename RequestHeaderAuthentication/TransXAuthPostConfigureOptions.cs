@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Options;
 
-namespace ChiscoTransX.Auth
+namespace RequestHeaderAuthentication
 {
     public sealed class TransXAuthPostConfigureOptions : IPostConfigureOptions<TransXAuthOptions>
     {

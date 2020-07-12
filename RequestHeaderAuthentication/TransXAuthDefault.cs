@@ -1,4 +1,4 @@
-﻿namespace ChiscoTransX.Auth
+﻿namespace RequestHeaderAuthentication
 {
 
     public static class TransXAuthDefault

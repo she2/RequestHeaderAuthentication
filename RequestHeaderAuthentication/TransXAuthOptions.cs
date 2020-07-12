@@ -1,7 +1,7 @@
-﻿using ChiscoTransX.Auth.Events;
-using Microsoft.AspNetCore.Authentication;
+﻿using Microsoft.AspNetCore.Authentication;
+using RequestHeaderAuthentication.Events;
 
-namespace ChiscoTransX.Auth
+namespace RequestHeaderAuthentication
 {
     public class TransXAuthOptions : AuthenticationSchemeOptions
     {
@@ -11,8 +11,8 @@ namespace ChiscoTransX.Auth
 
         protected new TransXAuthEvents Events
         {
-            get { return (TransXAuthEvents)base.Events; }
-            set { base.Events = value; }
+            get => (TransXAuthEvents)base.Events;
+            set => base.Events = value;
         }
     }
 }
