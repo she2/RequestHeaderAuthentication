@@ -15,27 +15,27 @@ using RequestHeaderAuthentication.Extensions;
 
 namespace RequestHeaderAuthentication
 {
-    public sealed class TransXAuthHandler : AuthenticationHandler<TransXAuthOptions>
+    public sealed class RequestHeaderAuthenticationHandler : AuthenticationHandler<RequestHeaderAuthenticationOptions>
     {
-        public TransXAuthHandler(IOptionsMonitor<TransXAuthOptions> options, ILoggerFactory logger, UrlEncoder encoder, IDataProtectionProvider dataProtection, ISystemClock clock)
+        public RequestHeaderAuthenticationHandler(IOptionsMonitor<RequestHeaderAuthenticationOptions> options, ILoggerFactory logger, UrlEncoder encoder, IDataProtectionProvider dataProtection, ISystemClock clock)
             : base(options, logger, encoder, clock)
         { }
 
 
-        protected new TransXAuthEvents Events
+        protected new RequestHeaderAuthenticationEvents Events
         {
-            get => (TransXAuthEvents)base.Events;
+            get => (RequestHeaderAuthenticationEvents)base.Events;
             set => base.Events = value;
         }
 
-        protected override Task<object> CreateEventsAsync() => Task.FromResult<object>(new TransXAuthEvents());
+        protected override Task<object> CreateEventsAsync() => Task.FromResult<object>(new RequestHeaderAuthenticationEvents());
 
         protected override async Task<AuthenticateResult> HandleAuthenticateAsync()
         {
             try
             {
                 // initialize the context
-                var validateTokenContext = new ValidateTransXTokenContext(Context, Scheme, Options);
+                var validateTokenContext = new ValidateRequestHeaderTokenContext(Context, Scheme, Options);
 
                 // add the headers to the context for validation
                 foreach (var headerKey in Options.HeaderKey)
@@ -91,7 +91,7 @@ namespace RequestHeaderAuthentication
 
                 Logger.ErrorProcessingMessage(ex);
 
-                var authenticationFailedContext = new TransXAuthenticationFailedContext(Context, Scheme, Options)
+                var authenticationFailedContext = new RequestHeaderAuthenticationFailedContext(Context, Scheme, Options)
                 {
                     Exception = ex
                 };

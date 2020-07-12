@@ -5,12 +5,12 @@ using Microsoft.AspNetCore.Http;
 
 namespace RequestHeaderAuthentication.Events
 {
-    public class TransXAuthenticationFailedContext : ResultContext<TransXAuthOptions>
+    public class RequestHeaderAuthenticationFailedContext : ResultContext<RequestHeaderAuthenticationOptions>
     {
-        public TransXAuthenticationFailedContext(
+        public RequestHeaderAuthenticationFailedContext(
             HttpContext context,
             AuthenticationScheme scheme,
-            TransXAuthOptions options)
+            RequestHeaderAuthenticationOptions options)
             : base(context, scheme, options) { }
 
         public Exception Exception { get; set; }

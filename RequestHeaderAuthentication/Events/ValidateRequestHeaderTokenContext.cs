@@ -5,12 +5,12 @@ using Microsoft.AspNetCore.Http;
 
 namespace RequestHeaderAuthentication.Events
 {
-    public class ValidateTransXTokenContext : ResultContext<TransXAuthOptions>
+    public class ValidateRequestHeaderTokenContext : ResultContext<RequestHeaderAuthenticationOptions>
     {
-        public ValidateTransXTokenContext(
+        public ValidateRequestHeaderTokenContext(
             HttpContext context,
             AuthenticationScheme scheme,
-            TransXAuthOptions options)
+            RequestHeaderAuthenticationOptions options)
             : base(context, scheme, options) { }
 
         public List<TokenDetails> TokenDetails { get; set; } = new List<TokenDetails>();

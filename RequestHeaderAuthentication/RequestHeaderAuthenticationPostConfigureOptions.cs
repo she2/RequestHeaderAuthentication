@@ -2,9 +2,9 @@
 
 namespace RequestHeaderAuthentication
 {
-    public sealed class TransXAuthPostConfigureOptions : IPostConfigureOptions<TransXAuthOptions>
+    public sealed class RequestHeaderAuthenticationPostConfigureOptions : IPostConfigureOptions<RequestHeaderAuthenticationOptions>
     {
-        public void PostConfigure(string name, TransXAuthOptions options)
+        public void PostConfigure(string name, RequestHeaderAuthenticationOptions options)
         {
             if (options.HeaderKey == null || options.HeaderKey.Length == 0)
             {
