@@ -1,12 +1,12 @@
 
 # Request Header Authentication Scheme 
-[![Build Status](https://github.com/she2/RequestHeaderAuthentication/workflows/tree/master/.github/workflows/badge.svg)]
+![Build](https://github.com/she2/RequestHeaderAuthentication/workflows/Build/badge.svg)
 
 An authentication scheme that helps validate/authenticate given http request header value in a clean way.
 
 #### Usage
 Usage is as simple as 
-- Add to your `ConfigureServices` method in startup class 
+- Add to your `ConfigureServices` method in startup class
 
 
 ```
