@@ -1,4 +1,7 @@
-# RequestHeaderAuthentication
+
+# Request Header Authentication Scheme 
+[![Build Status](https://github.com/she2/RequestHeaderAuthentication/workflows/tree/master/.github/workflows/badge.svg)]
+
 An authentication scheme that helps validate/authenticate given http request header value in a clean way.
 
 #### Usage
