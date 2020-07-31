@@ -13,7 +13,7 @@ namespace RequestHeaderAuthentication
 
             //if (string.IsNullOrEmpty(options.Challenge))
             //{
-            //    options.Challenge = TransXAuthDefault.AuthenticationSchemeOne;
+            //    options.Challenge = RequestHeaderDefault.AuthenticationSchemeOne;
             //}
         }
     }

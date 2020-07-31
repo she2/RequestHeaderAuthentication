@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace RequestHeaderAuthentication.Events
 {
-    public class RequestHeaderAuthenticationFailedContext : ResultContext<RequestHeaderAuthenticationOptions>
+    public sealed class RequestHeaderAuthenticationFailedContext : ResultContext<RequestHeaderAuthenticationOptions>
     {
         public RequestHeaderAuthenticationFailedContext(
             HttpContext context,
