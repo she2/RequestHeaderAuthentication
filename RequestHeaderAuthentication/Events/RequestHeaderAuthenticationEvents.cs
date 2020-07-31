@@ -10,7 +10,7 @@ namespace RequestHeaderAuthentication.Events
 
 
         public virtual Task ValidateToken(ValidateRequestHeaderTokenContext context) => OnValidateTransXToken(context);
-        public virtual Task TransXAuthenticationFailed(RequestHeaderAuthenticationFailedContext context) => OnTransXAuthenticationFailed(context);
+        public virtual Task AuthenticationFailed(RequestHeaderAuthenticationFailedContext context) => OnTransXAuthenticationFailed(context);
     }
 
 }
