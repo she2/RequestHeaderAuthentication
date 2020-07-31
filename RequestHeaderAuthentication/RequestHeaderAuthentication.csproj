@@ -9,5 +9,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.DataProtection.Abstractions" Version="2.2.0" />
   </ItemGroup>
-
+  <ItemGroup>
+    <version>1.0.310720</version>
+  </ItemGroup>
 </Project>
