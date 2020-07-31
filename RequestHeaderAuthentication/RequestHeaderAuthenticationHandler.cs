@@ -96,7 +96,7 @@ namespace RequestHeaderAuthentication
                     Exception = ex
                 };
 
-                await Events.TransXAuthenticationFailed(authenticationFailedContext).ConfigureAwait(false);
+                await Events.AuthenticationFailed(authenticationFailedContext).ConfigureAwait(false);
                 if (authenticationFailedContext.Result != null)
                 {
                     return authenticationFailedContext.Result;

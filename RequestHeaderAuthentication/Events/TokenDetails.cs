@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authentication;
 
 namespace RequestHeaderAuthentication.Events
 {
-    public class TokenDetails
+    public sealed class TokenDetails
     {
         /// <summary>
         ///The key retrieved from the request header

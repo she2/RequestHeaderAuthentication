@@ -9,7 +9,7 @@ namespace RequestHeaderAuthentication
 {
     public static class MiddlewareExtension
     {
-        public static IApplicationBuilder UseHeaderAuth(this IApplicationBuilder builder, string scheme)
+        public static IApplicationBuilder UseRequestHeaderAuthentication(this IApplicationBuilder builder, string scheme)
             => builder.UseMiddleware<RequestHeaderAuthenticationScheme>(scheme);
 
     }
