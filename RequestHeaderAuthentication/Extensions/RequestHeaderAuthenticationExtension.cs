@@ -1,30 +1,29 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using System;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
-using System;
-using RequestHeaderAuthentication;
 
-namespace RequestHeaderAuthentication
+namespace AspNetCore.Authentication.RequestHeader
 {
     public static class RequestHeaderAuthenticationExtension
     {
         /// <summary>
-        /// This defaults to use <see cref="RequestHeaderDefault.AUTHENTICATION_SCHEME_ONE"/>
+        /// This defaults to use <see cref="RequestHeaderDefault.AUTHENTICATION_SCHEME"/>
         /// </summary>
         /// <param name="builder"></param>
         /// <returns>Returns <see cref="AuthenticationBuilder"/> used to configure the authentication</returns>
         public static AuthenticationBuilder AddRequestHeaderAuthentication(this AuthenticationBuilder builder)
-           => builder.AddRequestHeaderAuthentication(RequestHeaderDefault.AUTHENTICATION_SCHEME_ONE, _ => { });
+           => builder.AddRequestHeaderAuthentication(RequestHeaderDefault.AUTHENTICATION_SCHEME, _ => { });
 
         /// <summary>
-        /// This defaults to using <see cref="RequestHeaderDefault.AUTHENTICATION_SCHEME_ONE"/>
+        /// This defaults to using <see cref="RequestHeaderDefault.AUTHENTICATION_SCHEME"/>
         /// </summary>
         /// <param name="builder"></param>
         /// <param name="configureOptions"> An <see cref="Action" /> used to configure <see cref="RequestHeaderAuthenticationOptions"/></param>
         /// <returns>Returns <see cref="AuthenticationBuilder"/> used to configure the authentication</returns>
         public static AuthenticationBuilder AddRequestHeaderAuthentication(this AuthenticationBuilder builder, Action<RequestHeaderAuthenticationOptions> configureOptions)
-            => builder.AddRequestHeaderAuthentication(RequestHeaderDefault.AUTHENTICATION_SCHEME_ONE, configureOptions);
+            => builder.AddRequestHeaderAuthentication(RequestHeaderDefault.AUTHENTICATION_SCHEME, configureOptions);
 
         /// <summary>
         /// Allows you to use any predefined or custom authentication scheme

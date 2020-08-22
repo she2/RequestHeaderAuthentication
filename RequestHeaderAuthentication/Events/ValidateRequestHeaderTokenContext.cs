@@ -3,7 +3,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 
-namespace RequestHeaderAuthentication.Events
+namespace AspNetCore.Authentication.RequestHeader.Events
 {
     public sealed class ValidateRequestHeaderTokenContext : ResultContext<RequestHeaderAuthenticationOptions>
     {

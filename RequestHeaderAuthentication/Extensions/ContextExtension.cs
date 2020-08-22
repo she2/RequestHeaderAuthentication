@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace RequestHeaderAuthentication.Extensions
+namespace AspNetCore.Authentication.RequestHeader.Extensions
 {
     public static class ContextExtension
     {
