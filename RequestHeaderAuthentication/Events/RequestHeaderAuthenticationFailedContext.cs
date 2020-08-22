@@ -1,9 +1,8 @@
-﻿
-using System;
+﻿using System;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 
-namespace RequestHeaderAuthentication.Events
+namespace AspNetCore.Authentication.RequestHeader.Events
 {
     public sealed class RequestHeaderAuthenticationFailedContext : ResultContext<RequestHeaderAuthenticationOptions>
     {

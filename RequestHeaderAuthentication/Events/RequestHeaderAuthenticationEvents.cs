@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace RequestHeaderAuthentication.Events
+namespace AspNetCore.Authentication.RequestHeader.Events
 {
     public class RequestHeaderAuthenticationEvents
     {
