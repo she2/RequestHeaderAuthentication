@@ -4,16 +4,16 @@ using System.Net;
 using System.Security.Claims;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using AspNetCore.Authentication.RequestHeader.Events;
+using AspNetCore.Authentication.RequestHeader.Extensions;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.Net.Http.Headers;
-using RequestHeaderAuthentication.Events;
-using RequestHeaderAuthentication.Extensions;
 
-namespace RequestHeaderAuthentication
+namespace AspNetCore.Authentication.RequestHeader
 {
     public sealed class RequestHeaderAuthenticationHandler : AuthenticationHandler<RequestHeaderAuthenticationOptions>
     {
@@ -59,8 +59,12 @@ namespace RequestHeaderAuthentication
                 if (validateTokenContext.Result != null)
                     return validateTokenContext.Result;
 
+                // if any token validation fails, return failure
                 if (validateTokenContext.TokenDetails.Any(s => !s.TokenValid))
+                {
+                    Logger.TokenValidationFailed();
                     return AuthenticateResult.Fail(validateTokenContext.ErrorMessage ?? "Request Header validation fails.");
+                }
 
                 // set claims if required
                 if (validateTokenContext.ClaimsToSet.Count > 0)

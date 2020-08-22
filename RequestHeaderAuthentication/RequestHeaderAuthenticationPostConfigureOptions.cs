@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Options;
 
-namespace RequestHeaderAuthentication
+namespace AspNetCore.Authentication.RequestHeader
 {
     public sealed class RequestHeaderAuthenticationPostConfigureOptions : IPostConfigureOptions<RequestHeaderAuthenticationOptions>
     {

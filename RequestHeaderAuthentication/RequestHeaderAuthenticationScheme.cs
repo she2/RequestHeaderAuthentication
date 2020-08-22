@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using AspNetCore.Authentication.RequestHeader.Extensions;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
-using RequestHeaderAuthentication.Extensions;
 
-namespace RequestHeaderAuthentication
+namespace AspNetCore.Authentication.RequestHeader
 {
     public class RequestHeaderAuthenticationScheme
     {

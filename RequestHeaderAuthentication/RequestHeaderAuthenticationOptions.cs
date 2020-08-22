@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Authentication;
-using RequestHeaderAuthentication.Events;
+﻿using AspNetCore.Authentication.RequestHeader.Events;
+using Microsoft.AspNetCore.Authentication;
 
-namespace RequestHeaderAuthentication
+namespace AspNetCore.Authentication.RequestHeader
 {
     public class RequestHeaderAuthenticationOptions : AuthenticationSchemeOptions
     {

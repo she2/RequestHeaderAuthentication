@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Authentication;
 
-namespace RequestHeaderAuthentication.Events
+namespace AspNetCore.Authentication.RequestHeader.Events
 {
     public sealed class TokenDetails
     {
